@@ -34,6 +34,9 @@ ts-rs = { workspace = true, features = [
 ] }
 walkdir = { workspace = true }
 
+[target.'cfg(target_os = "wasi")'.dependencies]
+libc = { workspace = true }
+
 [dev-dependencies]
 codex-utils-cargo-bin = { workspace = true }
 pretty_assertions = { workspace = true }
